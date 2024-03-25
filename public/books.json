@@ -1,0 +1,81 @@
+[
+    {
+      "id": 1,
+      "book_image": "https://i.ibb.co/XX709BX/images1.jpg",
+      "book_name": "The Shadow Conspiracy",
+      "author_name": "Eleanor Blackwood",
+      "review": "In a world of darkness and intrigue, Blackwood spins a tale that keeps you on the edge of your seat.",
+      "category": "Thriller",
+      "rating": 4.5,
+      "tags": ["Suspense", "Conspiracy"],
+      "total_pages": 368,
+      "publisher": "Raven Press",
+      "year_of_publishing": 2023
+    },
+    {
+      "id": 2,
+      "book_image": "https://i.ibb.co/KVZM5vh/images2.jpg",
+      "book_name": "Echoes of Eternity",
+      "author_name": "Lucas Nightingale",
+      "review": "Nightingale's prose transports you to another realm where time itself seems to lose its grip.",
+      "category": "Fantasy",
+      "rating": 4.2,
+      "tags": ["Magic", "Adventure"],
+      "total_pages": 432,
+      "publisher": "Moonlit Books",
+      "year_of_publishing": 2022
+    },
+    {
+      "id": 3,
+      "book_image": "https://i.ibb.co/8xyB1TW/6118885233333.jpg",
+      "book_name": "Shattered Reflections",
+      "author_name": "Amelia Grayson",
+      "review": "Grayson weaves a tale of love and loss that resonates long after the final page.",
+      "category": "Romance",
+      "rating": 4.8,
+      "tags": ["Heartbreak", "Redemption"],
+      "total_pages": 315,
+      "publisher": "Crystal Publishing",
+      "year_of_publishing": 2024
+    },
+    {
+      "id": 4,
+      "book_image": "https://i.ibb.co/f2nbXRg/9781797150161444444.jpg",
+      "book_name": "The Forgotten Citadel",
+      "author_name": "Victor Stone",
+      "review": "Stone's narrative prowess shines in this gripping tale of forgotten heroes and ancient mysteries.",
+      "category": "Historical_Fiction",
+      "rating": 4.6,
+      "tags": ["Adventure", "Intrigue"],
+      "total_pages": 512,
+      "publisher": "Empire Books",
+      "year_of_publishing": 2021
+    },
+    {
+      "id": 5,
+      "book_image": "https://i.ibb.co/KqWX8Zj/18485813255555.jpg",
+      "book_name": "Whispers in the Dark",
+      "author_name": "Sophie Rivers",
+      "review": "Rivers masterfully creates an atmosphere of suspense that will leave you guessing until the very end.",
+      "category": "Mystery",
+      "rating": 4.7,
+      "tags": ["Suspense", "Intrigue"],
+      "total_pages": 387,
+      "publisher": "Midnight Press",
+      "year_of_publishing": 2023
+    },
+    {
+      "id": 6,
+      "book_image": "https://i.ibb.co/rxmDHDd/6013154066666666.jpg",
+      "book_name": "Beyond the Stars",
+      "author_name": "Alexander Frost",
+      "review": "Frost takes you on a journey through the cosmos, exploring the depths of human existence.",
+      "category": "Science_Fiction",
+      "rating": 4.4,
+      "tags": ["Space", "Exploration"],
+      "total_pages": 448,
+      "publisher": "Galactic Books",
+      "year_of_publishing": 2020
+    }
+  ]
+  
