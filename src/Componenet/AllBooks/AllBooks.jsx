@@ -11,9 +11,11 @@ const AllBooks = () => {
   return (
     <div className="mt-24">
       <h1 className="text-4xl font-bold text-center">Books List</h1>
-      {books.map((book) => (
-        <Book key={book.id} book={book}></Book>
-      ))}
+      <div className="grid md:grid-cols-3 mt-10">
+        {books.map((book) => (
+          <Book key={book.id} book={book}></Book>
+        ))}
+      </div>
     </div>
   );
 };

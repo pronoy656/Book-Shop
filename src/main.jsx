@@ -10,6 +10,7 @@ import ListedBooks from "./Componenet/ListedBooks/ListedBooks";
 import PageToRead from "./Componenet/PageToRead/PageToRead";
 import Contact from "./Componenet/Contact/Contact";
 import Srvices from "./Componenet/Services/Srvices";
+import BookDetails from "./Componenet/BookDetails/BookDetails";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,12 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Srvices></Srvices>,
+      },
+      {
+        path: "/bookDetails/:id",
+        element: <BookDetails></BookDetails>,
+        loader: () =>
+          fetch("https://pronoy656.github.io/assignment-9-json/books.json"),
       },
     ],
   },
