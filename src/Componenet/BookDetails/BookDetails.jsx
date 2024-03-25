@@ -1,5 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { saveReadBooks } from "../../Utility/localStorage";
+
 const BookDetails = () => {
   const allBooksDetails = useLoaderData();
   //   Distructering with useParams
@@ -20,6 +24,17 @@ const BookDetails = () => {
     (singleBookDetail) => singleBookDetail.id === convertId
   );
   console.log(singleBookDetail);
+
+  const handleRead = () => {
+    saveReadBooks(convertId);
+    toast.success("Add to the booklist");
+  };
+
+  const handleWishlist = () => {
+    saveReadBooks(id);
+    toast.success("WishList added Successfully");
+  };
+
   return (
     <div className="flex gap-x-12">
       <div className="w-[573px] border-2 border-purple-500 p-16">
@@ -39,10 +54,18 @@ const BookDetails = () => {
         <p>{singleBookDetail.year_of_publishing}</p>
         <p>{singleBookDetail.rating}</p>
         <div className="flex gap-x-4">
-          <button className="btn text-black">Read</button>
-          <button className="btn bg-[#50B1C9] text-white">Wishlist</button>
+          <button onClick={handleRead} className="btn text-black">
+            Read
+          </button>
+          <button
+            onClick={handleWishlist}
+            className="btn bg-[#50B1C9] text-white"
+          >
+            Wishlist
+          </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
