@@ -1,3 +1,5 @@
+
+
 const getReadBooks = () =>{
     const storedReadBooks = localStorage.getItem('read-books');
     if(storedReadBooks){
@@ -16,9 +18,33 @@ if(!ifExist){
     storedReadBooks.push(id);
   localStorage.setItem('read-books',JSON.stringify(storedReadBooks))
 }
+
 }
 
 
+const getWishListBooks = () =>{
+  const storedWishListBooks = localStorage.getItem('wishlist-books');
+  if(storedWishListBooks){
+    return JSON.parse(storedWishListBooks);
+  }
+  return [];
+}
 
 
-export {saveReadBooks,getReadBooks}
+const saveWishListBooks = id =>{
+  const storedWishListBooks = getReadBooks();
+  const ifExist = storedWishListBooks.find(bookId => bookId === id);
+  if(!ifExist){
+     storedWishListBooks.push(id);
+    localStorage.setItem('wishlist-books',JSON.stringify(storedWishListBooks))
+  }
+  // else{
+  //  toast.alert ('cann not add')
+  // }
+ 
+  }
+
+
+
+
+export {saveReadBooks,getReadBooks,getWishListBooks,saveWishListBooks}

@@ -3,25 +3,25 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const navLinks = (
     <>
-      <li className="hover:bg-[#23BE0A]">
+      <li className="hover:bg-[#23BE0A] rounded-2xl">
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li className="hover:bg-[#23BE0A]">
+      <li className="hover:bg-[#23BE0A] rounded-2xl">
         <NavLink to={"/listedBooks"}>Listed Books</NavLink>
       </li>
-      <li className="hover:bg-[#23BE0A]">
+      <li className="hover:bg-[#23BE0A] rounded-2xl">
         <NavLink to={"/pagesToRead"}>Pages to Read</NavLink>
       </li>
-      <li className="hover:bg-[#23BE0A]">
+      <li className="hover:bg-[#23BE0A] rounded-2xl">
         <NavLink to={"/contact"}>Contact</NavLink>
       </li>
-      <li className="hover:bg-[#23BE0A]">
+      <li className="hover:bg-[#23BE0A] rounded-2xl">
         <NavLink to={"/services"}>Services</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 max-w-7xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn  lg:hidden">

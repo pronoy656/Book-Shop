@@ -9,7 +9,7 @@ const AllBooks = () => {
       .then((data) => setBooks(data));
   }, []);
   return (
-    <div className="mt-24">
+    <div className="mt-24 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center">Books List</h1>
       <div className="grid md:grid-cols-3 mt-10">
         {books.map((book) => (
