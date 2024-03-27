@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, Outlet, useLoaderData, useParams } from "react-router-dom";
 import { getReadBooks } from "../../Utility/localStorage";
 import { IoBookSharp } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
@@ -96,7 +96,7 @@ let ListedBooks = () => {
       </div>
       <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800">
         <Link
-          // to=""
+          to=""
           onClick={() => setTabIndex(0)}
           className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
             tabIndex === 0 ? "border border-b-0" : "border-b"
@@ -117,7 +117,7 @@ let ListedBooks = () => {
           <span>Read Books</span>
         </Link>
         <Link
-          // to={`wishlist`}
+          to={`wishlist`}
           onClick={() => setTabIndex(1)}
           className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
             tabIndex === 1 ? "border border-b-0" : "border-b"
@@ -139,6 +139,7 @@ let ListedBooks = () => {
           <span>Wishlist</span>
         </Link>
       </div>
+      <Outlet></Outlet>
       {selecteddisplay.map((book) => (
         <p key={book.id}>
           <div className="flex items-center gap-x-9 border bg-[#FFAC3326] rounded-2xl mt-6 p-6 w-[1160px]">

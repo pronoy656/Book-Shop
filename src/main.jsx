@@ -11,6 +11,8 @@ import PageToRead from "./Componenet/PageToRead/PageToRead";
 import Contact from "./Componenet/Contact/Contact";
 import Srvices from "./Componenet/Services/Srvices";
 import BookDetails from "./Componenet/BookDetails/BookDetails";
+import ReadBooks from "./Componenet/ReadBooks/ReadBooks";
+import WishList from "./Componenet/WishList/WishList";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const router = createBrowserRouter([
         element: <ListedBooks></ListedBooks>,
         loader: () =>
           fetch("https://pronoy656.github.io/assignment-9-json/books.json"),
+        children: [
+          {
+            index: true,
+            element: <ReadBooks></ReadBooks>,
+          },
+          {
+            path: "wishlist",
+            element: <WishList></WishList>,
+          },
+        ],
       },
       {
         path: "/pagesToRead",

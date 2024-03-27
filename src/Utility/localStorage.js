@@ -32,16 +32,20 @@ const getWishListBooks = () =>{
 
 
 const saveWishListBooks = id =>{
-  const storedWishListBooks = getReadBooks();
+  const storedWishListBooks = getWishListBooks();
   const ifExist = storedWishListBooks.find(bookId => bookId === id);
-  if(!ifExist){
-     storedWishListBooks.push(id);
+  if(ifExist === id){
+    
+    return []
+  }
+  else if(getReadBooks.id === id){
+      return []
+  }
+  else{
+    storedWishListBooks.push(id);
     localStorage.setItem('wishlist-books',JSON.stringify(storedWishListBooks))
   }
-  // else{
-  //  toast.alert ('cann not add')
-  // }
- 
+   
   }
 
 

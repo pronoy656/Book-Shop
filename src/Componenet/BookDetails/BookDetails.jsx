@@ -3,7 +3,11 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { saveReadBooks, saveWishListBooks } from "../../Utility/localStorage";
+import {
+  getWishListBooks,
+  saveReadBooks,
+  saveWishListBooks,
+} from "../../Utility/localStorage";
 
 const BookDetails = () => {
   const allBooksDetails = useLoaderData();
@@ -29,12 +33,17 @@ const BookDetails = () => {
 
   const handleRead = () => {
     saveReadBooks(convertId);
+
     toast.success("Add to the booklist");
   };
 
   const handleWishlist = () => {
     saveWishListBooks(convertId);
-    toast.success("WishList added Successfully");
+    const storedWishListBooks = getWishListBooks();
+    // toast.success("WishList added Successfully");
+    if (storedWishListBooks.includes(id)) {
+      toast.warn("Already added to the wishlist");
+    }
   };
 
   return (
