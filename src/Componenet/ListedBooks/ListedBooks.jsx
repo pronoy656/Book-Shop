@@ -192,9 +192,12 @@ let ListedBooks = () => {
                 <p className="bg-[#FFAC3326] p-2 rounded-2xl">
                   Rating:{book.rating}
                 </p>
-                <button className="bg-[#23BE0A] p-2 rounded-2xl text-white">
-                  View Details
-                </button>
+                <Link to={`/bookDetails/${book.id}`}>
+                  {" "}
+                  <button className="bg-[#23BE0A] p-2 rounded-2xl text-white">
+                    View Details
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -37,8 +37,8 @@ const PageToRead = () => {
     },
     {
       name: "Page F",
-      uv: 2390,
-      pv: 3800,
+      uv: 3000,
+      pv: 3000,
       amt: 2500,
     },
     {
@@ -65,10 +65,10 @@ const PageToRead = () => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
   return (
-    <div className="flex justify-center mt-6]">
+    <div className="flex justify-center mt-6 ">
       <BarChart
-        width={500}
-        height={300}
+        width={1000}
+        height={600}
         data={data}
         margin={{
           top: 20,

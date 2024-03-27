@@ -33,10 +33,16 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <ReadBooks></ReadBooks>,
+            loader: ({ params }) =>
+              fetch(
+                `https://pronoy656.github.io/assignment-9-json/books.json/${params.id}`
+              ),
           },
           {
             path: "wishlist",
             element: <WishList></WishList>,
+            loader: () =>
+              fetch("https://pronoy656.github.io/assignment-9-json/books.json"),
           },
         ],
       },
