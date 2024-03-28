@@ -142,15 +142,15 @@ let ListedBooks = () => {
       <Outlet></Outlet>
       {selecteddisplay.map((book) => (
         <p key={book.id}>
-          <div className="flex items-center gap-x-9 border bg-[#FFAC3326] rounded-2xl mt-6 p-6 w-[1160px]">
-            <div className="bg-slate-300 w-[270px] h-[270px] py-5 px-8 rounded-2xl ">
+          <div className="md:flex items-center gap-x-9 border bg-[#FFAC3326] rounded-2xl mt-6 p-6 md:w-[1160px]">
+            <div className="bg-slate-300 w-[270px] h-[270px] py-5 px-8 rounded-2xl ml-9 md:ml-0">
               <img
                 className="w-[230px] h-[230px] rounded-2xl"
                 src={book.book_image}
                 alt=""
               />
             </div>
-            <div>
+            <div className="mt-4 md:mt-0">
               <span className="text-2xl font-bold">{book.book_name}</span>
               <p className="mt-5 text-base font-medium">
                 by:{book.author_name}
@@ -183,9 +183,9 @@ let ListedBooks = () => {
                   <p>{book.total_pages}</p>
                 </div>
               </div>
-              <div className="border border-b-black mt-4 w-[800px]"></div>
+              <div className="border border-b-black mt-4 w-[350px] md:w-[800px]"></div>
 
-              <div className="flex gap-x-4 mt-8">
+              <div className="flex md:gap-x-4 mt-8">
                 <p className="bg-[#328EFF26] p-2 rounded-2xl">
                   Category:{book.category}
                 </p>

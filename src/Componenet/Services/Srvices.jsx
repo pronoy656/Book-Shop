@@ -2,11 +2,11 @@ import React from "react";
 
 const Srvices = () => {
   return (
-    <div className="max-w-7xl mx-auto flex items-center gap-x-6 mt-6">
-      <div className="w-[610px]">
+    <div className="max-w-7xl mx-auto md:flex items-center gap-x-6 mt-6">
+      <div className="md:w-[610px]">
         <img src="https://i.ibb.co/kc9MtKC/SL-050620-30640-14.jpg" alt="" />
       </div>
-      <div className="w-[610px]">
+      <div className="md:w-[610px] mt-6 md:mt-0">
         <div className="collapse collapse-plus bg-base-200">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title text-xl font-medium">

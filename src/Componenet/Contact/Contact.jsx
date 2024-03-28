@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
     <div className="max-w-7xl mx-auto mt-6">
-      <div className="flex gap-x-10">
-        <div className="w-[610px] border-2  bg-slate-100 p-6">
+      <div className="md:flex gap-x-10">
+        <div className="md:w-[610px] border-2  bg-slate-100 p-6">
           <h1 className="text-3xl font-bold">CONTACT INFO</h1>
           <p className="text-xl font-medium mt-4">
             {" "}
@@ -16,9 +16,9 @@ const Contact = () => {
             <span className="font-extrabold">Email:</span> info@junkybooks.com
           </p>
         </div>
-        <div className="w-[610px] border-2 bg-[#FFAC3326] p-6">
+        <div className="md:w-[610px] border-2 bg-[#FFAC3326] p-6 mt-6 md:mt-0">
           <p className="text-3xl font-bold">LEAVE A MESSAGE</p>
-          <div className="flex gap-x-8 mt-6">
+          <div className="md:flex gap-x-8 mt-6">
             <input
               className="bg-slate-100 p-4 border-2 border-black w-72"
               type="text"
@@ -27,7 +27,7 @@ const Contact = () => {
               placeholder="Name"
             />
             <input
-              className="bg-slate-100 p-4 border-2 border-black w-72"
+              className="bg-slate-100 p-4 border-2 border-black w-72 mt-4 md:mt-0"
               type="email"
               name=""
               id=""
